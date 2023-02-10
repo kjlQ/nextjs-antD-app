@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { Button, Grid, Space } from "antd";
+import { Button } from "antd";
 
 const Users = ({ users }) => {
   return (
     <div>
       <ul className="users-list">
         {users.map((user) => (
-          <div className="list-item">
+          <div key={user.id} className="list-item">
             <Link href={`/users/${user.id}`}>
               <Button type="primary" size="medium">
                 Explore
